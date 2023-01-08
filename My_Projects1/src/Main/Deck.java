@@ -13,11 +13,14 @@ public class Deck {
         String[] marks = new String[]{"spade", "heart", "diamond", "club"};
         ArrayList<Card> cardList = new ArrayList<>();
         for(String mark : marks){
-            for(int j=1; j<=13; j++){
+            for(int j=1; j<11; j++){
                 //iを元に選んだmarkと、トランプの数字jを使ってインスタンス化
                 Card card = new Card(mark, j);
                 cardList.add(card);
             }
+            cardList.add(new Card(mark, 11));
+            cardList.add(new Card(mark, 12));
+            cardList.add(new Card(mark, 13));
         }
         //cardListの要素をランダム順に並び替える。(つまり、トランプのテンをきる)
         Collections.shuffle(cardList);
@@ -25,17 +28,10 @@ public class Deck {
         this.cardList = cardList;
     }
 
-    public void printCardList(){
-        //cardListの要素をすべて表示する
-        for(Card card : cardList){
-            card.print();
-        }
-    }
-
     public Card Draw(int index){
 
-        Card draw = cardList.get(index-1);
-        cardList.remove(index-1);
+        Card draw = cardList.get(index);
+        cardList.remove(index);
 
         return draw;
 
@@ -48,4 +44,5 @@ public class Deck {
     public ArrayList<Card> getCardList(){
         return this.cardList;
     }
+
 }

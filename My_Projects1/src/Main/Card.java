@@ -6,23 +6,11 @@ public class Card{
 
     public Card(String mark, int number){
         this.mark = mark;
-        this.number = number;
-    }
-
-    public void print(){
-        //拡張switch文で表示
-        //マークと数字を標準出力に表示する(例:ハートのA)
-        switch(this.number){
-            case 1 -> System.out.println("A of " + this.mark + "s");
-            case 11 -> System.out.println("J of " + this.mark + "s");
-            case 12 -> System.out.println("Q of " + this.mark + "s");
-            case 13 -> System.out.println("K of " + this.mark + "s");
-            default -> System.out.println(this.number + " of " + this.mark + "s");
+        if(number == 11){
+            this.number = 11;
+        }else {
+            this.number = number;
         }
-    }
-
-    public String getMark(){
-        return this.mark;
     }
 
     public int getSuit(){

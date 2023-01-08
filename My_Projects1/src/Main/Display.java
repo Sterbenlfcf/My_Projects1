@@ -1,7 +1,6 @@
 package Main;
 
 import Main.BJ.DisplayBJ;
-import Main.BJ.PlayerBJ;
 
 import javax.swing.*;
 
@@ -11,17 +10,12 @@ import java.awt.event.ActionListener;
 
 public class Display implements ActionListener {
 
-    private JFrame dis;
-    private JPanel top_panel, mid_panel, bottom_panel;
-    private JLabel msg_lbl;
-    private JButton mid_btn1, mid_btn2, mid_btn3, mid_btn4, mid_btn5, mid_btn6;
-//    private PlayerBJ player;
-//    private Computer dealer;
+    private final JFrame dis;
+    private final JPanel top_panel, mid_panel, bottom_panel;
+    private final JLabel msg_lbl;
+    private final JButton mid_btn1, mid_btn2, mid_btn3, mid_btn4, mid_btn5, mid_btn6;
 
     public Display(){
-
-//        this.player = player;
-//        this.dealer = dealer;
 
         this.dis = new JFrame("Game");
         this.dis.setSize(1500, 1000);
@@ -42,8 +36,8 @@ public class Display implements ActionListener {
         setPanel(mid_panel, Color.LIGHT_GRAY, new BorderLayout(), new Dimension(1500, 475));
         this.dis.add(mid_panel, BorderLayout.CENTER);
 
-        this.mid_btn1 = new JButton("BJ");
-        setButton(mid_btn1, Color.yellow, this, 500, 475, 100);
+        this.mid_btn1 = new JButton("Black Jack");
+        setButton(mid_btn1, Color.yellow, this, 500, 475,   80);
         mid_panel.add(mid_btn1, BorderLayout.WEST);
 
         this.mid_btn2 = new JButton("Poker");
@@ -58,8 +52,8 @@ public class Display implements ActionListener {
         setPanel(bottom_panel, Color.LIGHT_GRAY, new BorderLayout(), new Dimension(1500, 475));
         this.dis.add(bottom_panel, BorderLayout.SOUTH);
 
-        this.mid_btn4 = new JButton("BJ");
-        setButton(mid_btn4, Color.cyan, this, 500, 180, 100);
+        this.mid_btn4 = new JButton("Black Jack");
+        setButton(mid_btn4, Color.cyan, this, 500, 180, 80);
         bottom_panel.add(mid_btn4, BorderLayout.WEST);
 
         this.mid_btn5 = new JButton("Poker");
@@ -79,18 +73,11 @@ public class Display implements ActionListener {
 
         String cmd = e.getActionCommand();
 
-        if(cmd.equals("BJ")){
+        if(cmd.equals("Black Jack")){
 
             mid_btn1.setBackground(Color.GREEN);
+            mid_btn4.setBackground(Color.GREEN);
             new DisplayBJ();
-//            mid_btn1.setBackground(Color.GREEN);
-//            if(parent_num < child_num){
-//                msg_lbl.setText("You win!");
-//            }else if(child_num < parent_num){
-//                msg_lbl.setText("You lose!");
-//            }else{
-//                msg_lbl.setText("Draw!");
-//            }
         }
 
     }
@@ -98,7 +85,6 @@ public class Display implements ActionListener {
     public static void setPanel(JPanel panel, Color color, BorderLayout layout, Dimension dimension){
 
         panel.setBackground(color);
-//        panel.setLocation(x_pos, y_pos);
         panel.setLayout(layout);
         panel.setPreferredSize(dimension);
 

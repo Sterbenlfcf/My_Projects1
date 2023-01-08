@@ -4,7 +4,6 @@ import Main.Card;
 import Main.Deck;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class PlayerBJ {
 
@@ -16,45 +15,35 @@ public class PlayerBJ {
         drawList = new ArrayList<>();
     }
 
-    public void DrawCard(Deck deck, Rule rule){
-//        Scanner input = new Scanner(System.in);
-//        int number;
-//        while(true){
-//            System.out.print("What card do you draw from the top：");
-//            String n = input.nextLine();
-//            if (rule.isDrawOK(n)) {
-//                number = Integer.parseInt(n);
-//                addDrawCard(deck.Draw(number));
-//                break;
-//            }
-//        }
-        addDrawCard(deck.Draw(1));
+    public void DrawCard(Deck deck, RuleBJ rule){
+        addDrawCard(deck.Draw(0));
     }
 
     public void addDrawCard(Card card){
         this.drawList.add(card);
     }
 
-    public void Show(){
-        System.out.println(this.name + "'s hand");
-        for(Card card : this.drawList){
-            card.print();
-        }
-    }
-
     public int Sum(){
         int sum = 0;
         int num;
+        int count = 0;
         for(Card card : drawList) {
             num = card.getNumber();
             if(num == 1){
+                count += 1;
                 sum += 11;
                 if(sum > 21){
                     sum -= 10;
+                    count -= 1;
                 }
+            }else if(num == 11){
+                sum += 10;
             }else{
-                sum += Math.min(10, num);
+                sum = sum + Math.min(10, num);
             }
+        }
+        if(count > 0 && sum >21){
+            sum -= 10;
         }
         return sum;
     }

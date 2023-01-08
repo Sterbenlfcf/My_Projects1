@@ -1,6 +1,5 @@
 package Main.BJ;
 
-import Main.Computer;
 import Main.Deck;
 
 import javax.swing.*;
@@ -15,16 +14,19 @@ import static Main.Display.*;
 public class DisplayBJ implements ActionListener {
 
     private final JFrame dis;
-    private final JPanel top_panel, mid_panel, bottom_panel;
-    private final JLabel msg_lbl;
+    private final JPanel bottom_panel;
+    private JPanel mid_panel;
     private final ArrayList<JLabel> lbl = new ArrayList<>();
     private final ArrayList<JLabel> lbl_player = new ArrayList<>();
-    private  JButton btn1, btn2, btn3, btn4, btn5, btn6;
+    private final ArrayList<JLabel> lbl_dealer = new ArrayList<>();
+    private final JButton btn1;
+    private JButton btn2;
     private final PlayerBJ player = new PlayerBJ("player");
-    private ComputerBJ dealer = new ComputerBJ("dealer");
-    private Rule rule;
+    private final ComputerBJ dealer = new ComputerBJ("dealer");
     private final Deck deck = new Deck();
+    private final RuleBJ rule = new RuleBJ(deck.getCardList());
 
+    int nextCounter = 0;
 
     public DisplayBJ(){
 
@@ -34,61 +36,65 @@ public class DisplayBJ implements ActionListener {
         this.dis.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.dis.setResizable(false);
 
-        this.top_panel = new JPanel();
+        JPanel top_panel = new JPanel();
         setPanel(top_panel, Color.ORANGE, null, new Dimension(1500, 50));
         this.dis.add(top_panel, BorderLayout.NORTH);
 
-        this.msg_lbl = new JLabel("BlackJack");
+        JLabel msg_lbl = new JLabel("BlackJack");
         setLabelFont(msg_lbl, Color.BLACK, 650, 15, 200, 20, 20, false);
-        this.top_panel.add(this.msg_lbl);
+        top_panel.add(msg_lbl);
 
         this.mid_panel = new JPanel();
         setPanel(mid_panel, Color.GREEN, null, new Dimension(1500, 450));
         this.dis.add(mid_panel);
 
-        JLabel lbl0 = new JLabel("Dealer's Card");
-        setLabelFont(lbl0, Color.BLACK, 650, 10, 200, 30, 30, false);
-        lbl.add(lbl0);
-        this.mid_panel.add(lbl.get(0), BorderLayout.NORTH);
+        lbl_dealer.add(new JLabel("Dealer's Card"));
+        setLabelFont(lbl_dealer.get(lbl_dealer.size()-1), Color.BLACK, 650, 10, 200, 30, 30, false);
+        this.mid_panel.add(lbl_dealer.get(0), BorderLayout.NORTH);
 
-        JLabel lbl1 = new JLabel("Player's Card");
-        setLabelFont(lbl1, Color.BLACK, 650, 400, 200, 30, 30, false);
-        lbl.add(lbl1);
-        this.mid_panel.add(lbl.get(1), BorderLayout.CENTER);
+        lbl_player.add(new JLabel("Player's Card"));
+        setLabelFont(lbl_player.get(lbl_player.size()-1), Color.BLACK, 650, 400, 200, 30, 30, false);
+        this.mid_panel.add(lbl_player.get(0), BorderLayout.CENTER);
 
         for(int i=0; i<2; i++) {
             dealer.DrawCard(deck, rule);
             player.DrawCard(deck, rule);
         }
 
-        JLabel lbl2 = new JLabel(getIcon(0, 0));
-        setLabelFont(lbl2, Color.WHITE, 490, 50, 400, 300, 16, false);
-        lbl.add(lbl2);
-        this.mid_panel.add(lbl.get(2), BorderLayout.NORTH);
+        lbl.add(new JLabel(getIcon(0, 0)));
+        setLabelFont(lbl.get(lbl.size()-1), Color.WHITE, 490, 50, 400, 300, 16, false);
+        this.mid_panel.add(lbl.get(lbl.size()-1), BorderLayout.NORTH);
 
-        JLabel lbl3 = new JLabel(getIcon(dealer.getSuit(1), dealer.getNumber(1)));
-        setLabelFont(lbl3, Color.WHITE, 600, 50, 400, 300, 16, false);
-        lbl.add(lbl3);
-        this.mid_panel.add(lbl.get(3), BorderLayout.NORTH);
+        lbl_dealer.add(new JLabel(getIcon(dealer.getSuit(0), dealer.getNumber(0))));
 
-        JLabel lbl4 = new JLabel(getIcon(player.getSuit(0), player.getNumber(0)));
-        setLabelFont(lbl4, Color.WHITE, 440, 440, 400, 300, 16, false);
-        lbl.add(lbl4);
-        lbl_player.add(lbl4);
-        this.mid_panel.add(lbl.get(4), BorderLayout.NORTH);
+        lbl_dealer.add(new JLabel(getIcon(dealer.getSuit(1), dealer.getNumber(1))));
+        setLabelFont(lbl_dealer.get(lbl_dealer.size()-1), Color.WHITE, 600, 50, 400, 300, 16, false);
+        this.mid_panel.add(lbl_dealer.get(lbl_dealer.size()-1), BorderLayout.NORTH);
 
-        JLabel lbl5 = new JLabel(getIcon(player.getSuit(1), player.getNumber(1)));
-        setLabelFont(lbl5, Color.WHITE, 660, 440, 400, 300, 16, false);
-        lbl.add(lbl5);
-        lbl_player.add(lbl5);
-        this.mid_panel.add(lbl.get(5), BorderLayout.NORTH);
+        int dealer_sum = dealer.Sum() - dealer.getNumber_d(0);
+        String str;
+        if(dealer_sum == 1){
+            str = "11";
+        }else{
+            str = String.valueOf(dealer_sum);
+        }
+        lbl.add(new JLabel(str));
+        setLabelFont(lbl.get(lbl.size()-1), Color.LIGHT_GRAY, 1120, 50, 200, 200, 70, true);
+        this.mid_panel.add(lbl.get(lbl.size()-1), BorderLayout.NORTH);
 
-        String str = String.valueOf(player.Sum());
+        lbl_player.add(new JLabel(getIcon(player.getSuit(0), player.getNumber(0))));
+        setLabelFont(lbl_player.get(lbl_player.size()-1), Color.WHITE, 440, 440, 400, 300, 16, false);
+        this.mid_panel.add(lbl_player.get(lbl_player.size()-1), BorderLayout.NORTH);
 
-        JLabel lbl7 = new JLabel(str);
-        setLabelFont(lbl7, Color.LIGHT_GRAY, 1150, 490, 200, 200, 70, true);
-        lbl.add(lbl7);
-        this.mid_panel.add(lbl.get(6), BorderLayout.NORTH);
+        lbl_player.add(new JLabel(getIcon(player.getSuit(1), player.getNumber(1))));
+        setLabelFont(lbl_player.get(lbl_player.size()-1), Color.WHITE, 660, 440, 400, 300, 16, false);
+        this.mid_panel.add(lbl_player.get(lbl_player.size()-1), BorderLayout.NORTH);
+
+        String str2 = String.valueOf(player.Sum());
+
+        lbl.add(new JLabel(str2));
+        setLabelFont(lbl.get(lbl.size()-1), Color.LIGHT_GRAY, 1120, 450, 200, 200, 70, true);
+        this.mid_panel.add(lbl.get(lbl.size()-1), BorderLayout.NORTH);
 
         this.bottom_panel = new JPanel();
         setPanel(bottom_panel, Color.LIGHT_GRAY, new BorderLayout(), new Dimension(1500, 100));
@@ -102,37 +108,134 @@ public class DisplayBJ implements ActionListener {
         setButton(btn2, Color.WHITE, this, 750, 100, 70);
         this.bottom_panel.add(btn2, BorderLayout.EAST);
 
+        if(player.Sum() == 21){
+            this.btn1.hide();
+            this.btn2.hide();
+
+            lbl.add(new JLabel("Black Jack"));
+            setLabelFont(lbl.get(lbl.size()-1), Color.WHITE, 1020, 650, 400, 100, 40, false);
+            this.mid_panel.add(lbl.get(lbl.size()-1), BorderLayout.NORTH);
+
+            this.btn2 = new JButton("NEXT");
+            setButton(btn2, Color.WHITE, this, 750, 100, 70);
+            this.bottom_panel.add(btn2, BorderLayout.CENTER);
+        }
+
         this.dis.setVisible(true);
     }
 
     public void actionPerformed(ActionEvent e){
 
         String cmd = e.getActionCommand();
-        JLabel label;
-        int hitCounter = 0;
 
-        if(cmd.equals("HIT")) {
-            setLabelFont(lbl_player.get(lbl_player.size()-2), Color.BLACK, 100, 440, 400, 300, 16, false);
+        if(cmd.equals("HIT")){
+            lbl_player.get(lbl_player.size()-2).hide();
             setLabelFont(lbl_player.get(lbl_player.size()-1), Color.BLACK, 100, 440, 400, 300, 16, false);
             player.DrawCard(deck, rule);
             String str = String.valueOf(player.Sum());
-            lbl.get(6).setText(str);
+            this.lbl.get(lbl.size()-1).setText(str);
             if(player.Sum() > 21) {
-                lbl.get(6).setBackground(Color.RED);
-                this.bottom_panel.hide();
-                label = new JLabel("BURST");
-                setLabelFont(label, Color.WHITE, 550, 440, 400, 300, 16, false);
-                lbl.add(label);
-                this.bottom_panel.add(label, BorderLayout.SOUTH);
-            }
-            label = new JLabel(getIcon(player.getSuit(player.getSize()-1), player.getNumber(player.getSize()-1)));
-            setLabelFont(label, Color.WHITE, 550, 440, 400, 300, 16, false);
-            lbl.add(label);
-            lbl_player.add(label);
-            this.mid_panel.add(lbl.get(lbl.size()-1), BorderLayout.NORTH);
-        }else if(cmd.equals("STAND")){
+                lbl.get(lbl.size()-1).setBackground(Color.RED);
+                this.btn1.hide();
+                this.btn2.hide();
+                lbl.add(new JLabel("BURST"));
+                setLabelFont(lbl.get(lbl.size()-1), Color.WHITE, 1120, 650, 200, 100, 45, false);
+                this.mid_panel.add(lbl.get(lbl.size()-1), BorderLayout.NORTH);
 
+                this.btn2 = new JButton("NEXT");
+                setButton(btn2, Color.WHITE, this, 750, 100, 70);
+                this.bottom_panel.add(btn2, BorderLayout.CENTER);
+            }else if(player.Sum() == 21){
+                this.btn1.hide();
+                this.btn2.hide();
+                lbl.add(new JLabel("Black Jack"));
+                setLabelFont(lbl.get(lbl.size()-1), Color.WHITE, 1020, 650, 400, 100, 40, false);
+                this.mid_panel.add(lbl.get(lbl.size()-1), BorderLayout.NORTH);
+
+                this.btn2 = new JButton("NEXT");
+                setButton(btn2, Color.WHITE, this, 750, 100, 70);
+                this.bottom_panel.add(btn2, BorderLayout.CENTER);
+            }
+
+            lbl_player.add(new JLabel(getIcon(player.getSuit(player.getSize()-1), player.getNumber(player.getSize()-1))));
+            setLabelFont(lbl_player.get(lbl_player.size()-1), Color.WHITE, 550, 440, 400, 300, 16, false);
+            this.mid_panel.add(lbl_player.get(lbl_player.size()-1), BorderLayout.NORTH);
         }
+
+        if(cmd.equals("STAND")){
+            this.btn1.hide();
+            this.btn2.hide();
+            this.btn2 = new JButton("NEXT");
+            setButton(btn2, Color.WHITE, this, 750, 100, 70);
+            this.bottom_panel.add(btn2, BorderLayout.CENTER);
+        }
+
+        if(cmd.equals("NEXT")){
+            if(nextCounter == 0) {
+                lbl.get(0).hide();
+                setLabelFont(lbl_dealer.get(lbl_dealer.size() - 2), Color.WHITE, 440, 50, 400, 300, 16, false);
+                this.mid_panel.add(lbl_dealer.get(lbl_dealer.size() - 2), BorderLayout.NORTH);
+
+                setLabelFont(lbl_dealer.get(lbl_dealer.size() - 1), Color.WHITE, 660, 50, 400, 300, 16, false);
+
+            }else{
+                DealerPlay(nextCounter);
+            }
+
+            String str = String.valueOf(dealer.Sum());
+
+            this.lbl.get(1).setText(str);
+            setLabelFont(lbl.get(1), Color.LIGHT_GRAY, 1120, 50, 200, 200, 70, true);
+            this.mid_panel.add(lbl.get(lbl.size()-1), BorderLayout.NORTH);
+
+            nextCounter += 1;
+
+            if(dealer.Sum() > 16){
+                if(dealer.Sum() > 21){
+                    lbl.get(1).setBackground(Color.RED);
+                    lbl.add(new JLabel("BURST"));
+                    setLabelFont(lbl.get(lbl.size()-1), Color.WHITE, 1120, 250, 200, 100, 40, false);
+                    this.mid_panel.add(lbl.get(lbl.size()-1), BorderLayout.NORTH);
+                }else if(dealer.Sum() == 21){
+                lbl.add(new JLabel("Black Jack"));
+                setLabelFont(lbl.get(lbl.size()-1), Color.WHITE, 1020, 250, 400, 100, 40, false);
+                this.mid_panel.add(lbl.get(lbl.size()-1), BorderLayout.NORTH);
+                }
+                btn2.setText("RESULT");
+            }
+        }
+
+        if(cmd.equals("RESULT")){
+            mid_panel.hide();
+            this.mid_panel = new JPanel();
+            setPanel(mid_panel, Color.GREEN, null, new Dimension(1500, 450));
+            this.dis.add(mid_panel);
+            String str3;
+            JudgmentBJ j = new JudgmentBJ();
+            str3 = j.Judge(player, dealer);
+
+            lbl.add(new JLabel(str3));
+            setLabelFont(lbl.get(lbl.size()-1), Color.GREEN, 350, 330, 800, 100, 100, false);
+            this.mid_panel.add(lbl.get(lbl.size()-1), BorderLayout.CENTER);
+
+            btn2.setText("CLOSE");
+        }
+
+        if(cmd.equals("CLOSE")){
+            this.dis.setVisible(false);
+        }
+    }
+
+    public void DealerPlay(int nextCounter){
+
+        lbl_dealer.get(lbl_dealer.size()-2).hide();
+        setLabelFont(lbl_dealer.get(lbl_dealer.size()-1), Color.BLACK, 100, 50, 400, 300, 16, false);
+
+        dealer.DrawCard(deck, rule);
+
+        lbl_dealer.add(new JLabel(getIcon(dealer.getSuit(dealer.getSize()-1), dealer.getNumber(dealer.getSize()-1))));
+        setLabelFont(lbl_dealer.get(lbl_dealer.size()-1), Color.WHITE, 550, 50, 400, 300, 16, false);
+        this.mid_panel.add(lbl_dealer.get(lbl_dealer.size()-1), BorderLayout.NORTH);
 
     }
 

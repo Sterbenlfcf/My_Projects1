@@ -4,11 +4,11 @@ import Main.Card;
 
 import java.util.ArrayList;
 
-public class Rule {
+public class RuleBJ {
 
     private final ArrayList<Card> cardList;
 
-    public Rule(ArrayList<Card> cardList){
+    public RuleBJ(ArrayList<Card> cardList){
         this.cardList = cardList;
     }
 

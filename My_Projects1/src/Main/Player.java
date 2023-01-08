@@ -1,6 +1,6 @@
 package Main;
 
-import Main.BJ.Rule;
+import Main.BJ.RuleBJ;
 
 import java.util.ArrayList;
 
@@ -14,7 +14,7 @@ public class Player {
         drawList = new ArrayList<>();
     }
 
-    public void DrawCard(Deck deck, Rule rule){
+    public void DrawCard(Deck deck, RuleBJ rule){
 
     }
 
