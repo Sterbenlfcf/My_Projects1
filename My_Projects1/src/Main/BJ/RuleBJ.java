@@ -35,20 +35,4 @@ public class RuleBJ {
         return false;
     }
 
-    public void isRange(int number) {
-        if (1 > number || number > 5) {
-            throw new IllegalArgumentException();
-        }
-    }
-
-    public boolean isUnder21(PlayerBJ player){
-        if(22 > player.Sum()){
-            return true;
-        }else{
-            System.out.println(player.getName() + "'s total value is " + player.Sum());
-            System.out.println("Burst");
-            return false;
-        }
-    }
-
 }

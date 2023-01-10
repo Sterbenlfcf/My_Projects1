@@ -10,63 +10,45 @@ import java.awt.event.ActionListener;
 
 public class Display implements ActionListener {
 
-    private final JFrame dis;
-    private final JPanel top_panel, mid_panel, bottom_panel;
-    private final JLabel msg_lbl;
-    private final JButton mid_btn1, mid_btn2, mid_btn3, mid_btn4, mid_btn5, mid_btn6;
-
     public Display(){
 
-        this.dis = new JFrame("Game");
-        this.dis.setSize(1500, 1000);
-        this.dis.setLocationRelativeTo(null);
-        this.dis.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.dis.setResizable(false);
+        JFrame dis;
+        JPanel top_panel, mid_panel;
+        JLabel msg_lbl;
+        JButton mid_btn1, mid_btn2, mid_btn3;
 
-        this.top_panel = new JPanel();
+        dis = new JFrame("Game");
+        dis.setSize(1500, 1000);
+        dis.setLocationRelativeTo(null);
+        dis.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        dis.setResizable(false);
+
+        top_panel = new JPanel();
         setPanel(top_panel, Color.ORANGE, null, new Dimension(1500, 50));
-        this.dis.add(top_panel, BorderLayout.NORTH);
+        dis.add(top_panel, BorderLayout.NORTH);
 
-        this.msg_lbl = new JLabel("Game");
+        msg_lbl = new JLabel("Game");
         msg_lbl.setHorizontalAlignment(JLabel.CENTER);
-        this.top_panel.add(this.msg_lbl);
+        top_panel.add(msg_lbl);
         setLabelFont(msg_lbl, Color.BLACK, 700, 15, 100, 20, 20, false);
 
-        this.mid_panel = new JPanel();
+        mid_panel = new JPanel();
         setPanel(mid_panel, Color.LIGHT_GRAY, new BorderLayout(), new Dimension(1500, 475));
-        this.dis.add(mid_panel, BorderLayout.CENTER);
+        dis.add(mid_panel, BorderLayout.CENTER);
 
-        this.mid_btn1 = new JButton("Black Jack");
-        setButton(mid_btn1, Color.yellow, this, 500, 475,   80);
+        mid_btn1 = new JButton("Black Jack");
+        setButton(mid_btn1, Color.green, this, 500, 475,   80);
         mid_panel.add(mid_btn1, BorderLayout.WEST);
 
-        this.mid_btn2 = new JButton("Poker");
+        mid_btn2 = new JButton("Poker");
         setButton(mid_btn2, Color.cyan, this, 500, 475, 100);
         mid_panel.add(mid_btn2, BorderLayout.CENTER);
 
-        this.mid_btn3 = new JButton("Speed");
-        setButton(mid_btn3, Color.yellow, this, 500, 180, 100);
+        mid_btn3 = new JButton("High & Low");
+        setButton(mid_btn3, Color.yellow, this, 500, 475, 80);
         mid_panel.add(mid_btn3, BorderLayout.EAST);
 
-        this.bottom_panel = new JPanel();
-        setPanel(bottom_panel, Color.LIGHT_GRAY, new BorderLayout(), new Dimension(1500, 475));
-        this.dis.add(bottom_panel, BorderLayout.SOUTH);
-
-        this.mid_btn4 = new JButton("Black Jack");
-        setButton(mid_btn4, Color.cyan, this, 500, 180, 80);
-        bottom_panel.add(mid_btn4, BorderLayout.WEST);
-
-        this.mid_btn5 = new JButton("Poker");
-        setButton(mid_btn5, Color.yellow, this, 500, 180, 100);
-        bottom_panel.add(mid_btn5, BorderLayout.CENTER);
-
-        this.mid_btn6 = new JButton("Speed");
-        setButton(mid_btn6, Color.cyan, this, 500, 180, 100);
-        bottom_panel.add(mid_btn6, BorderLayout.EAST);
-
-
-
-        this.dis.setVisible(true);
+        dis.setVisible(true);
     }
 
     public void actionPerformed(ActionEvent e){
@@ -75,8 +57,6 @@ public class Display implements ActionListener {
 
         if(cmd.equals("Black Jack")){
 
-            mid_btn1.setBackground(Color.GREEN);
-            mid_btn4.setBackground(Color.GREEN);
             new DisplayBJ();
         }
 

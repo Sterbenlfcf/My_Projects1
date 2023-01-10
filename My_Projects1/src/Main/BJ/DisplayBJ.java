@@ -179,7 +179,7 @@ public class DisplayBJ implements ActionListener {
                 setLabelFont(lbl_dealer.get(lbl_dealer.size() - 1), Color.WHITE, 660, 50, 400, 300, 16, false);
 
             }else{
-                DealerPlay(nextCounter);
+                DealerPlay();
             }
 
             String str = String.valueOf(dealer.Sum());
@@ -226,7 +226,7 @@ public class DisplayBJ implements ActionListener {
         }
     }
 
-    public void DealerPlay(int nextCounter){
+    public void DealerPlay(){
 
         lbl_dealer.get(lbl_dealer.size()-2).hide();
         setLabelFont(lbl_dealer.get(lbl_dealer.size()-1), Color.BLACK, 100, 50, 400, 300, 16, false);
