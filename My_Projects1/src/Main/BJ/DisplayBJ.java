@@ -239,304 +239,304 @@ public class DisplayBJ implements ActionListener {
 
     }
 
-    public static ImageIcon getIcon(int suit, int num){
-
-        ImageIcon icon1;
-        ImageIcon icon2;
-        Image smallIcon;
-
-        switch(suit){
-            case 0:
-                icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/card.jpeg");
-                smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.9), -1, Image.SCALE_SMOOTH);
-                icon2 = new ImageIcon(smallIcon);
-                return icon2;
-            case 1:
-                switch(num) {
-                    case 1:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/spade/1.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 2:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/spade/2.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 3:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/spade/3.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 4:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/spade/4.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 5:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/spade/5.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 6:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/spade/6.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 7:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/spade/7.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 8:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/spade/8.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 9:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/spade/9.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 10:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/spade/10.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 11:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/spade/11.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 12:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/spade/12.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 13:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/spade/13.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    default:
-                        return null;
-                }
-
-            case 2:
-                switch(num) {
-                    case 1:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/heart/1.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 2:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/heart/2.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 3:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/heart/3.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 4:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/heart/4.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 5:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/heart/5.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 6:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/heart/6.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 7:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/heart/7.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 8:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/heart/8.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 9:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/heart/9.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 10:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/heart/10.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 11:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/heart/11.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 12:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/heart/12.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 13:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/heart/13.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    default:
-                        return null;
-                }
-            case 3:
-                switch(num) {
-                    case 1:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/diamond/1.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 2:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/diamond/2.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 3:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/diamond/3.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 4:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/diamond/4.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 5:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/diamond/5.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 6:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/diamond/6.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 7:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/diamond/7.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 8:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/diamond/8.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 9:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/diamond/9.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 10:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/diamond/10.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 11:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/diamond/11.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 12:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/diamond/12.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 13:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/diamond/13.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    default:
-                        return null;
-                }
-            case 4:
-                switch(num) {
-                    case 1:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/crab/1.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 2:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/crab/2.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 3:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/crab/3.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 4:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/crab/4.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 5:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/crab/5.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 6:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/crab/6.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 7:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/crab/7.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 8:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/crab/8.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 9:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/crab/9.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 10:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/crab/10.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 11:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/crab/11.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 12:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/crab/12.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    case 13:
-                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/crab/13.png");
-                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
-                        icon2 = new ImageIcon(smallIcon);
-                        return icon2;
-                    default:
-                        return null;
-                }
-            default:
-                return null;
-
-        }
-
-    }
+//    public static ImageIcon getIcon(int suit, int num){
+//
+//        ImageIcon icon1;
+//        ImageIcon icon2;
+//        Image smallIcon;
+//
+//        switch(suit){
+//            case 0:
+//                icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/card.jpeg");
+//                smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.9), -1, Image.SCALE_SMOOTH);
+//                icon2 = new ImageIcon(smallIcon);
+//                return icon2;
+//            case 1:
+//                switch(num) {
+//                    case 1:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/spade/1.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 2:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/spade/2.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 3:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/spade/3.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 4:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/spade/4.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 5:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/spade/5.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 6:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/spade/6.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 7:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/spade/7.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 8:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/spade/8.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 9:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/spade/9.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 10:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/spade/10.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 11:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/spade/11.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 12:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/spade/12.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 13:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/spade/13.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    default:
+//                        return null;
+//                }
+//
+//            case 2:
+//                switch(num) {
+//                    case 1:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/heart/1.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 2:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/heart/2.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 3:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/heart/3.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 4:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/heart/4.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 5:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/heart/5.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 6:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/heart/6.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 7:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/heart/7.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 8:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/heart/8.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 9:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/heart/9.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 10:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/heart/10.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 11:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/heart/11.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 12:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/heart/12.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 13:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/heart/13.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    default:
+//                        return null;
+//                }
+//            case 3:
+//                switch(num) {
+//                    case 1:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/diamond/1.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 2:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/diamond/2.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 3:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/diamond/3.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 4:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/diamond/4.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 5:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/diamond/5.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 6:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/diamond/6.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 7:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/diamond/7.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 8:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/diamond/8.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 9:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/diamond/9.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 10:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/diamond/10.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 11:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/diamond/11.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 12:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/diamond/12.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 13:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/diamond/13.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    default:
+//                        return null;
+//                }
+//            case 4:
+//                switch(num) {
+//                    case 1:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/crab/1.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 2:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/crab/2.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 3:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/crab/3.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 4:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/crab/4.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 5:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/crab/5.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 6:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/crab/6.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 7:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/crab/7.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 8:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/crab/8.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 9:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/crab/9.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 10:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/crab/10.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 11:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/crab/11.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 12:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/crab/12.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    case 13:
+//                        icon1 = new ImageIcon("/D:/MyProjects/My_Projects1/My_Projects1/src/Illustration/crab/13.png");
+//                        smallIcon = icon1.getImage().getScaledInstance((int) (icon1.getIconWidth() * 0.3), -1, Image.SCALE_SMOOTH);
+//                        icon2 = new ImageIcon(smallIcon);
+//                        return icon2;
+//                    default:
+//                        return null;
+//                }
+//            default:
+//                return null;
+//
+//        }
+//
+//    }
 
 }
